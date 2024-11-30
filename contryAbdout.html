@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/44/44386.png">
+    <link rel="stylesheet" href="./contry.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Countries</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Nunito Sans", sans-serif;
+        transition: all .5s ease-in-out;
+      }
+      .dark-theme {
+        background-color: #2b3743;
+      }
+      .dark-theme-text,
+      .search-country-dark::placeholder {
+        color: white;
+      }
+      .dark-bg {
+        background-color: #202d36;
+      }
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px;
+        height: 70px;
+        box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.5);
+      }
+      .nav-content h1 {
+        font-weight: 800;
+      }
+      .mode {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+      }
+      .mode i,
+      .mode p {
+        font-weight: 500;
+      }
+      .search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 100px;
+      }
+      .input-search {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 0 20px;
+        box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+        min-width: 30%;
+        height: 45px;
+        border-radius: 5px;
+      }
+      .search-country {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-weight: 500;
+      }
+      .dropdown-search {
+        position: relative;
+        font-weight: 500;
+      }
+      .dropdown-search .label {
+        padding: 12px 20px;
+        box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        cursor: pointer;
+        width: 175px;
+      }
+      .dropdown-menu {
+        position: absolute;
+        top: 50px;
+        padding: 12px 20px;
+        width: 175px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+        background-color: white;
+      }
+      .dropdown-value {
+        cursor: pointer;
+      }
+      .dropdown-value + .dropdown-value {
+        margin-top: 5px;
+      }
+      .dropdown-value:hover {
+        text-decoration: underline;
+      }
+      .all-countries {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 80px 150px;
+        margin: 0 100px 50px;
+      }
+      .country {
+        border-radius: 8px;
+        box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        height: 420px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .country:hover {
+        transform: scale(1.05);
+      }
+      .country img {
+        width: 100%;
+        height: 50%;
+        border-radius: 8px 8px 0 0;
+      }
+      .country-name {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px 20px;
+      }
+      .more-detail {
+        padding: 0 20px 40px;
+      }
+      .more-detail p {
+        font-size: 16px;
+      }
+      .more-detail p + p {
+        margin-top: 5px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-content">
+        <h1>Where in the world?</h1>
+        <div class="dark-mode mode">
+          <i class="ri-moon-line"></i>
+          <p>Dark Mode</p>
+        </div>
+        <div class="light-mode mode hidden">
+          <i class="ri-sun-fill"></i>
+          <p>Light Mode</p>
+        </div>
+      </div>
+    </nav>
+    <div class="back-btn">
+      <a class="back" href="/"> <i class="ri-arrow-left-line"></i> Back </a>
+    </div>
+    <section class="detail-country">
+      <div class="flag">
+        <img class="flag-img" src="" alt="Flag" />
+      </div>
+      <div class="more-info">
+        <h1 id="country-name">Belgium</h1>
+        <div class="more-det">
+          <div class="more-det-1">
+            <p><b>Native Name:</b> Belgie</p>
+            <p><b>Population:</b> 11,319,511</p>
+            <p><b>Region:</b> Europe</p>
+            <p><b>Sub Region:</b> Western Europe</p>
+            <p><b>Capital:</b> Brussels</p>
+          </div>
+          <div class="more-det-2">
+            <p><b>Top Level Domain:</b> .be</p>
+            <p><b>Currencies:</b> Euro</p>
+            <p><b>Languages:</b> Dutch, French, German</p>
+          </div>
+        </div>
+        <div class="border-countries">
+          <b>Border Countries:</b>
+        </div>
+      </div>
+    </section>
+    <script src="./contry.js"></script>
+  </body>
+</html>
